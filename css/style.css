@@ -1,0 +1,55 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.myMargin{
+    margin: 25px;
+}
+.picHeight{
+    height: 550px;
+}
+.paraStyle{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 150px;
+    margin-right: 150px; 
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.logMargin{
+    margin: 150px;
+}
+.bg-size{
+    background-size: cover;
+}
+.clr-label{
+    color: white;
+}
+.btn-pos{
+    text-align: center;
+}
+footer{
+    background-color: gainsboro;
+    color: black;
+    height: 3.5em; 
+}
+footer h6{
+    text-align: center;
+    padding: 15px;
+}
+.container1{
+    display: flex;
+}
+#imgStyle{
+    margin: 40px;  
+    height: 250px;
+    width: 300px;
+}  
+.description{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 40px; 
+}
+.heading{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: blue;
+}
