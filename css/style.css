@@ -21,9 +21,9 @@
 .bg-size{
     background-size: cover;
 }
-.clr-label{
+/* .clr-label{
     color: white;
-}
+} */
 .btn-pos{
     text-align: center;
 }
@@ -53,3 +53,28 @@ footer h6{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: blue;
 }
+#errorName{
+    color: blue;
+}
+#errorEmail{
+    color: blue;
+}
+#errorMobNumber{
+    color: blue;
+}
+#errorPassword{
+    color: blue;
+}
+#errorrePassword{
+    color: blue;
+}
+h5{
+    text-align :center; 
+}
+#errorEmail1{
+    color: blue;
+}
+#errorPassword1{
+    color: blue;
+}
+
