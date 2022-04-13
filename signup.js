@@ -70,13 +70,8 @@ let errorrepwd = document.getElementById("errorrePassword");
             mobnumber.value="";
             return false;
         }
-        else if(mobnumber.value.length>10||mobnumber.value.length<10){
-            errormobnumber.innerHTML = "Must contain 10 numbers only";
-            mobnumber.value="";
-            return false;
-        }
         else{
-            errormobnumber.innerHTML = "Enter numbers only ";
+            errormobnumber.innerHTML = "Invalid mobile number ";
             mobnumber.value="";
             return false; 
         }
