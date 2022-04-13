@@ -28,13 +28,13 @@ let errorrepwd = document.getElementById("errorrePassword");
       }
 
     function name_validation(name1){
-        let regex = /^[a-zA-Z]{2,30}$/; 
+        let regex = /^[a-zA-Z]{3,30}$/; 
         if(regex.test(name1.value)){
             errorname.innerHTML = "";
              return true;    
         }
-        else {
-            errorname.innerHTML = "Enter your name";
+        else{
+            errorname.innerHTML = "Invalid name";
             name1.value="";
              return false;   
         }       
@@ -47,7 +47,7 @@ let errorrepwd = document.getElementById("errorrePassword");
              return true;
 
         }
-        else if(email.value.trim()==""){
+        else if(email.value.trim()===""){
             erroremail.innerHTML = "Email can't be empty";
             email.value="";
             return false;
@@ -65,13 +65,18 @@ let errorrepwd = document.getElementById("errorrePassword");
             errormobnumber.innerHTML = "";
              return true;
         }
-        else if(mobnumber.value.trim()==""){
+        else if(mobnumber.value.trim()===""){
             errormobnumber.innerHTML = "Mobile number can't be empty";
             mobnumber.value="";
             return false;
         }
+        else if(mobnumber.value.length>10){
+            errormobnumber.innerHTML = "Must contain 10 numbers only";
+            mobnumber.value="";
+            return false;
+        }
         else{
-            errormobnumber.innerHTML = "Enter a valid mobile number ";
+            errormobnumber.innerHTML = "Enter numbers only ";
             mobnumber.value="";
             return false; 
         }
@@ -80,7 +85,7 @@ let errorrepwd = document.getElementById("errorrePassword");
 
 function password_validation(password) 
 { 
-var passw1 = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$/;
+var passw1 = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,20}$/;
 var passw2 = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
 if(password.value.match(passw1)) 
 { 
@@ -93,11 +98,11 @@ else if(password.value.match(passw2))
 { 
 document.getElementById("msg").innerHTML ="Medium" ;
 document.getElementById("msg").style.color ="orange" ;
-errorpwd.innerHTML = "should contain minimum 8 characters";
+errorpwd.innerHTML = "Password must contain minimum 8 characters and atleast one special character";
 password.value="";
 return false;
 }
-else if(password.value.trim()==""){
+else if(password.value.trim()===""){
     document.getElementById("msg").innerHTML ="" ;
     errorpwd.innerHTML = "Password can't be empty";
     password.value="";
@@ -106,18 +111,18 @@ else if(password.value.trim()==""){
 else {
 document.getElementById("msg").innerHTML ="Weak" ;
 document.getElementById("msg").style.color ="red" ;
-errorpwd.innerHTML = "Minimum 8 characters, at least one uppercase, and one lower case, must contain at least one number";
+errorpwd.innerHTML = "Password must contain minimum 8 characters, at least one uppercase, lowercase, number and special character";
 password.value="";
 return false;
 }
 }
 
 function repassword_validation(repassword){
-    if(password.value==repassword.value){
+    if(password.value===repassword.value){
         return true;
     }
-    else if(repassword.value.trim()==""){
-        errorrepwd.innerHTML="can't be empty";
+    else if(repassword.value.trim()===""){
+        errorrepwd.innerHTML="Password can't be empty";
         repassword.value="";
         return false;
     }

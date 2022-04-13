@@ -19,7 +19,7 @@ function validate(){
             erroremail.innerHTML = "";
              return true;
         }
-        else if(email.value.trim()==""){
+        else if(email.value.trim()===""){
             erroremail.innerHTML = "Email can't be empty";
             email.value="";
             return false;
@@ -33,7 +33,7 @@ function validate(){
 
 function password_validation(password) 
 { 
-var passw1 = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$/;
+var passw1 = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,20}$/;
 var passw2 = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
 if(password.value.match(passw1)) 
 { 
@@ -46,11 +46,11 @@ else if(password.value.match(passw2))
 { 
 document.getElementById("msg").innerHTML ="Medium" ;
 document.getElementById("msg").style.color ="orange" ;
-errorpwd.innerHTML = "should contain minimum 8 characters";
+errorpwd.innerHTML = "Password must contain minimum 8 characters and atleast one special character";
 password.value="";
 return false;
 }
-else if(password.value.trim()==""){
+else if(password.value.trim()===""){
     document.getElementById("msg").innerHTML ="" ;
     errorpwd.innerHTML = "Password can't be empty";
     password.value="";
@@ -59,7 +59,7 @@ else if(password.value.trim()==""){
 else {
 document.getElementById("msg").innerHTML ="Weak" ;
 document.getElementById("msg").style.color ="red" ;
-errorpwd.innerHTML = "Minimum 8 characters, at least one uppercase, and one lower case, must contain at least one number";
+errorpwd.innerHTML = "Password must contain minimum 8 characters, at least one uppercase, lowercase, number and special character";
 password.value="";
 return false;
 }
